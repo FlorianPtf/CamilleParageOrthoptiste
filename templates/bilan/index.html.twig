@@ -1,0 +1,551 @@
+{% extends 'base.html.twig' %}
+
+{% block bilan %}
+
+
+<!-- **********************************************************************************************************************************
+**************************************************************   HEADER    ************************************************************
+*********************************************************************************************************************************** -->
+
+
+    <header>
+         <a href="{{ path('home')}}" class="logo"> <img src="img/logo_transparent.png"> </a> 
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="{{ path('home')}}">Orthoptie</a></li>
+                <li><a href="{{ path('app_bilan')}}">Bilans</a></li>
+                <li><a href="{{ path('app_reeducation')}}">Réeducations</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<!-- *********************************************************************************************************************************
+******************************************************   PARALLAX EFFECT    **********************************************************
+***********************************************************************************************************************************-->
+
+    <div class="pimg2">
+        <p class="pimgtext">Nos Bilans</p> 
+    </div>
+
+<!-- **********************************************************************************************************************************
+**************************************************   PARTIE BILAN ORTHOPTIQUE     *****************************************************
+*********************************************************************************************************************************** -->
+
+    <section>
+        <div class="containerortho1">
+            <div class="containerorthogauche1" >
+                <div class="imgorthogauche1">
+                </div>
+            </div>
+
+
+            <div class="containerorthodroite1">
+                <h3> Bilan orthoptique </h3>
+                <p> Le bilan orthoptique c’est l’étude du fonctionnement de la vision qui permet de poser un
+                    diagnostic et définir un projet de soins en fonction des plaintes décrites par le patient, de ses
+                    attentes, ou bien de répondre à la demande du médecin prescripteur.
+                    Le bilan orthoptique se décline en 2 parties : 
+                </p> <br>
+
+                
+                    <li class="lititre">
+                        <i class="fa-solid fa-eye"></i> Le bilan optomoteur :
+                    </li>
+                    
+                  
+                    <li>
+                         La fonction motrice assure la mobilité des globes oculaires
+                        sous la dépendance des fonctions supérieures, elle participe à: l’orientation du regard,
+                        la gestion des mouvements corporels, au contrôle de l’environnement. Elle est assurée
+                        par les muscles oculomoteurs et les mouvements oculaires. La fonction motrice est
+
+                        sous l’influence du système vestibulaire (oreille interne) et de la proprioception
+                        (sensibilité profonde).
+                        Lors de ce test on effectue : un examen sous écran (ESE), la motilité oculaire, le PPC,
+                        la motricité conjuguée (fixation, poursuites, saccades, vergence)…
+                    </li> <br>
+
+                    <li class="lititre">
+                    <i class="fa-solid fa-eye"></i> Le bilan sensoriel :    
+                    </li>
+                    <li>
+                         La fonction sensorielle assure la capacité de discrimination :
+                        détecter, distinguer, voir net, voir simple, sous la dépendance: de la réfraction, du
+                        parallélisme oculaire, de la correspondance rétinienne. Elle est assurée par l’œil au
+                        sens large de la rétine au système accommodatif et le système optomoteur. Elle est
+                        sous l’influence des voies visuelles et du cortex.
+                        Lors de ce test on effectue : l’acuité visuelle, les capacités fusionnelles, la vision
+                        stéréoscopique, la vision des couleurs, la sensibilité aux contrastes, l’étude de
+                        l’accommodation (flexibilité accommodative et réserve accommodative)…
+                    </li><br>
+
+                <p> 
+                    Le bilan orthoptique est toujours précédé d’une anamnèse (interrogatoire complet et détails).
+                    L’orthoptiste s’intéresse au développement visuel de l’individu. Il cherche des signes d’appels
+                    (strabisme, difficultés scolaires, fatigue visuelle, céphalées, diplopies…) afin d’orienter le
+                    bilan. Lors de cette phase l’orthoptiste détermine le motif du bilan et relate les antécédents
+                    personnels et familiaux du patient (les corrections optiques, strabisme, amblyopie dans la
+                    famille…, diabète, hypertension, dépression, trouble postural, glaucome, DMLA, épilepsie,
+                    crise de convulsion prématurité…).
+                    Au cours du bilan si un trouble réfractif non corrigé est détecté une consultation
+                    ophtalmologique peut alors être conseillée. De meme, si l’orthoptiste suspecte une paralysie
+                    oculomotrice un rendez-vous neurologique peut être préconisé. En effet, il n’est pas rare que
+                    l’orthoptiste réoriente chez divers professionnels. 
+                </p> <br>
+
+                <p>
+                    En fonction des résultats du bilan, une rééducation orthoptique peut être proposée :
+                </p>
+
+                <div class="divreeducation"> 
+                    <a class="buttonreeducation" href="{{ path('app_reeducation')}}">Réeducation Insuffisance de convergence</a> 
+                </div>
+
+                <div class="divreeducation"> 
+                    <a class="buttonreeducation" href="{{ path('app_reeducation')}}">Réeducation strabisme</a>
+                </div>
+
+                    <br> <br>
+            </div>
+        </div>
+
+        <div class="pimg3">
+        </div>
+
+
+<!-- **********************************************************************************************************************************
+**************************************************   PARTIE BILAN NEUROVISUEL     *****************************************************
+*********************************************************************************************************************************** -->
+
+        <div class="containerortho2">
+    
+            <div class="containerorthogauche2">
+                <h3> Bilan Neurovisuel </h3>
+                <p> Les troubles spécifiques des apprentissages correspondent à des dysfonctionnements cognitifs
+                    qui affectent l’acquisition, l’organisation, la mémorisation, la compréhension ou l’utilisation
+                    de l’information.
+                    Beaucoup d’apprentissages sont concernés par l’oculomotricité, la perception visuelle et leur
+                    implication dans l’organisation du geste. La pratique orthoptique auprès d’enfants en
+                    difficultés d’apprentissage permet de constater l’existence de troubles visuels fréquents
+                    d’ordre perceptif et/ou perceptivo-moteur pouvant avoir une incidence néfaste sur le quotidien
+                    et la scolarité même si l’acuité visuelle est normale.
+                    Un bilan neurovisuel se caractérise par un bilan orthoptique complété par un bilan
+                    fonctionnel.
+                    Le bilan fonctionnel permet d’observer la mise en jeu des éléments sensoriel et moteur. Il vise
+                    à déterminer le bon fonctionnement de la fixation, de la perception, le traitement de
+
+                    l’information, de la coordination œil-main, et des stratégies du regard lors de l’exploration
+                    visuelle.
+                    Le bilan fonctionnel est réalisé en 3 actes :
+                </p> <br>
+
+                    <li class="lititre">
+                        <i class="fa-solid fa-eye"></i> Vision et communication : 
+                    </li>
+                    <li>
+                        L’exploration porte sur les capacités d’émission et de
+                        réception du regard et de la vision ainsi que sur leur éventuelle sensibilité à:
+                        l’éclairage, la distance, la direction, la durée de l’échange, la fatigue, l’ambiance
+                        (bruit, foule), la station debout, le mouvement
+                    </li> <br>
+
+                    <li class="lititre">
+                        <i class="fa-solid fa-eye"></i> Vision et saisie de l’information :
+                    </li>
+                    <li>
+                        Il s’agit là de perception visuelle, donc de
+                        sensation visuelle traitée par la cognition et intégrée à l’ensemble de la perception
+                        sensorielle : unité perceptive (par l’association des modalités) et sélectivité
+                        (dissociation). La perception visuelle informe sur la forme, la couleur, le
+                        mouvement… et participe à la perception de l’espace. L’orthoptiste test l’analyse
+                        perceptive visuelle (barrage de E, coccimod, superposition, safari, MVPT4…)
+                    </li><br>
+
+                    <li class="lititre">
+                        <i class="fa-solid fa-eye"></i> Vision et organisation du geste :
+                    </li>
+                    <li>
+                        Le geste correspond, ici, à un ensemble de
+                        mouvements corporels sélectionnés dans un but d’action dite « tâche ». L’orthoptiste
+                        observe : la localisation visuelle d’une cible (pointage), la localisation successive de
+                        cibles (piquage : étoile de Thomas), la relation vision/mouvement corporel
+                        (préhension), la relation vision/posture (ajustements proactifs (anticipé par la vision)
+                        et rétroactifs (proprioceptifs)) ; les stratégies visuo-grapho-motices (coloriage,
+                        écriture spontanée, dictée, copiée), les relations vision centrale/mouvements, les
+                        relations vision périphériques/mouvements, la coordination dans le temps et l’espace
+                    </li><br>
+
+                <p> 
+                    Ce bilan évalue la mise en œuvre de la vision dans l’acquisition et dans la
+                    réalisation d’une tâche.
+                </p> <br>
+
+                <p>
+                    La vision a une place prépondérante dans les apprentissages et intervient dans beaucoup des
+                    taches que les élèves ont à accomplir: lecture, écriture, recopiage, pose des calculs,
+                    géométrie… L’orthoptiste doit donc diagnostiquer si la vision est performante ou non et en
+                    quoi celle-ci a un impact si elle est déficitaire. La vision soutient-elle ou perturbe-t-elle
+                    l’activité ? Quelles sont les répercussions de la vision sur les difficultés d’apprentissage ? Le
+                    bilan orthoptique permet d’orienter le diagnostic et est complémentaire des différents bilans
+                    effectués par les autres professions médicales et paramédicales. En effet, un trouble nommé
+                    n’élimine pas d’autres troubles associés.               
+                </p>
+
+                <div class="divreeducation"> 
+                    <a class="buttonreeducation" href="{{ path('app_reeducation')}}">Réeducation Neurovisuel Troubles des apprentissages</a>
+                </div>
+
+                    <br> <br>
+            </div>
+
+            <div class="containerorthodroite2">
+                <div class="imgorthodroite2">
+                </div>
+            </div>
+        </div>
+
+        <div class="pimg4">
+        </div>
+
+
+<!-- **********************************************************************************************************************************
+**************************************************   PARTIE BILAN BASSE VISION     ****************************************************
+*********************************************************************************************************************************** -->
+
+
+        <div class="containerortho3">
+            <div class="containerorthogauche3">
+                <div class="imgorthogauche3">
+                </div>
+            </div>
+
+
+            <div class="containerorthodroite3">
+                <h3> Bilan Basse Vision </h3>
+                <p>
+                    La basse vision, est une dégradation importante de l’acuité visuelle ou à une réduction du champ visuel. Une classification de l’OMS 
+                    (organisation mondiale de la santé) de la déficience visuelle permet de déterminer les différents degrés d’atteintes de la fonction visuelle 
+                    (malvoyance et cécité).
+                </p> <br>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Catégorie OMS</th>
+                            <th>Conditions sur l'acuité visuelle</th>
+                            <th>Type d'atteinte visuelle (CIM-10)</th>
+                            <th>Type de deficience visuelle (CIH)</th>
+                        </tr>
+                    </thead>
+                        <tbody>
+                            <tr>
+                                <td>Catégorie I</td>
+                                <td>Acuité visuelle corrigée binoculaire <3/10 et > ou = à 1/10 avec un champ visuel d'au moins 20 degrés.</td>
+                                <td>Basse Vision ou malvoyance</td>
+                                <td>Déficience moyenne</td>
+                            </tr>
+
+                            <tr>
+                                <td>Catégorie II</td>
+                                <td>Acuité visuelle corrigée binoculaire <1/10 et > ou = à 1/20.</td>
+                                <td>Basse Vision ou malvoyance</td>
+                                <td>Déficience sévère</td>
+                            </tr>
+
+                            <tr>
+                                <td>Catégorie III</td>
+                                <td>Acuité visuelle corrigée <1/20 et > ou à 1/50 ou un champ visuel < à 10 degrès mais > à 5 degrés.</td>
+                                <td>Basse Vision ou malvoyance</td>
+                                <td>Déficience profonde</td>
+                            </tr>
+
+                            <tr>
+                                <td>Catégorie IV</td>
+                                <td>Acuité visuelle < à 1/50 mais perception lumineurse préservée ou champ visuel < a 5 degrés.</td>
+                                <td>Cécité</td>
+                                <td>Déficience presque totale</td>
+                            </tr>
+
+                            <tr>
+                                <td>Catégorie V</td>
+                                <td>Cécité absolue, absence de perception lumineuse.</td>
+                                <td>Cécité</td>
+                                <td>Déficience totale</td>
+                            </tr>
+                        </tbody>
+                
+                
+                </table> <br> <br>
+
+
+                <p>
+                    La classification la plus intéressante sera la catégorisation selon Collenbrander car il s’agit d’une approche de type fonctionnelle, 
+                    axée sur les répercussions de la perte de la vision.
+                </p> 
+
+                    <li class="lititre">
+                        <i class="fa-solid fa-eye"></i> Incapacité légère :
+                    </li>
+                    <li>
+                        Capacité d’agir avec une aide simple, telle que de banales lunettes.
+                    </li> <br>
+
+                    <li class="lititre">
+                        <i class="fa-solid fa-eye"></i> Incapacité modérée : Classe 1 des déficiences                   
+                    </li>
+                    <li>
+                        Accomplissement des tâches presque normalement avec une aide simple, la loupe par exemple.
+                    </li><br>
+
+                    <li class="lititre">
+                        <i class="fa-solid fa-eye"></i> Incapacité Grave / sévère : Classe 2 des déficiences                    
+                    </li>
+                    <li>
+                        Capacité d’effectuer une activité en s’appuyant sur la vision mais avec des aides spécifiques et à un niveau moindre de vitesse ou une 
+                        fatigabilité plus grande.
+                    </li><br>
+
+                    <li class="lititre">
+                        <i class="fa-solid fa-eye"></i> Incapacité Profonde : Classe 3 des déficiences                 
+                    </li>
+                    <li>
+                       Incapacité d’effectuer toute tâche à l’aide de la vision seule, même avec des aides nécessité d’y associer d’autres facteurs sensoriels.
+                    </li><br>
+
+                    <li class="lititre">
+                        <i class="fa-solid fa-eye"></i> Incapacité presque Totale : Classe 4 des déficiences                 
+                    </li>
+                    <li>
+                        La vision est inutile, on ne peut s’y fier, d’autres informations sensorielles sont absolument indispensables.
+                    </li><br>
+
+                    <li class="lititre">
+                        <i class="fa-solid fa-eye"></i> Incapacité Totale : Classe 5 des déficiences                   
+                    </li>
+                    <li>
+                        Qui exige de s’appuyer totalement sur les autres sens.
+                    </li><br>
+                <br>
+
+                <p> 
+                Le bilan basse vision permet au patient en situation de handicap visuel, de malvoyance ou de cécité d’étudier ses capacités visuelles restantes, 
+                leurs limites, les retentissements dans leur vie quotidienne, de mieux comprendre le déficit et ainsi orienter vers une prise en charge appropriée. 
+                La basse vision se base sur les incapacités d’utiliser la vision fonctionnelle restant et maximiser son utilisation grâce aux capacités d’apprentissage 
+                du cerveau : la plasticité cérébrale ;
+                </p> <br>
+
+
+
+<table>
+                    <thead>
+                        <tr>
+                            <th>VERSANT SENSORIEL </th>
+                            <th>VERSANT MOTEUR </th>
+                            <th>VERSANT FONCTIONNEL</th>
+                        </tr>
+                    </thead>
+                        <tbody>
+                            <tr>
+                                <td>Que voit l’œil ?</td>
+                                <td>Comment l’œil regarde ?</td>
+                                <td>L’œil peut-il comprendre ? </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    AV<br>
+                                    Sens spatial : Vision stéréoscopique + Champ visuel (Privilégier Goldmann). <br>
+                                    Vision des couleurs. <br>
+                                    Vision des contrastes.<br>
+                                    Nécessite coopération
+                                </td>
+                                <td>
+                                    Fixation. <br>
+                                    Déviation oculomotrice.<br>
+                                    Poursuite<br>
+                                    Saccades<br>
+                                    Mouvements occulocéphaliques<br>
+                                    Nécessite observation
+                                </td>
+                                <td>
+                                    Discrimination et représentation mentale<br>
+                                    Exploration visuelle Coordination oculo-manuelle Vitesse de lecture<br>
+                                    Besoin en aides techniques (filtres, loupes)<br>
+                                    </td>
+                            </tr>
+                        </tbody>
+                </table> <br>
+
+                <div class="divreeducation"> 
+                    <a class="buttonreeducation" href="{{ path('app_reeducation')}}">Réeducation Déficience visuelle : Basse vision</a>
+                </div>
+                    <br> <br>
+            </div>
+        </div>
+
+        <div class="pimg5">
+        </div>
+
+<!-- **********************************************************************************************************************************
+**************************************************   PARTIE BILAN REFRACTION     ******************************************************
+*********************************************************************************************************************************** -->
+
+
+        <div class="containerortho4">
+    
+            <div class="containerorthogauche4">
+                <h3> Refraction </h3>
+                <p> 
+                    La réfraction permet d’assurer au patient une vision nette et confortable. 
+                    Afin d’obtenir la correction optique la mieux adaptée possible l’orthoptiste peut préconiser une consultation ophtalmique sous cycloplégie 
+                    (Skiacol : 1 goutte par œil 1h avant le rdv ophtalmologique suivie d’une goutte 10mn plus tard et d’une 3e goutte 20mn après l’instillation de la première ;
+                    ou Atropine : 1 goutte par œil matin et soir 5 jours précédant la consultation ophtalmologique et 1 goutte le matin du rdv). 
+                    La cycloplégie est le procédé qui consiste à freiner le mécanisme d’accommodation du patient, à l’aide de collyres, dans le
+                    but de mesurer sa correction optique, sans que celle-ci ne soit « faussée » par l’accommodation ou la fatigue visuelle.
+                    L’accommodation est le mécanisme qui permet de faire la mise au point de la vue d’un objet, en fonction de sa distance : 
+                    c’est le phénomène qui permet de maintenir une vision nette d’un objet que l’on rapproche, à la manière d’un « focus » 
+                    d’appareil photo. Elle met en jeu le cristallin et le muscle ciliaire. La capacité d’accommodation est maximale à la naissance 
+                    et diminue progressivement avec l’âge.
+                </p> <br>
+
+                <li class="lititre">
+                    <i class="fa-solid fa-eye"></i> Myopie : 
+                </li>
+                <li>
+                    Œil trop long, l’image de l’objet observé se forme en avant de la rétine : il est donc vu ﬂou de loin mais nette de près.
+                    Le principe de la correction est d’introduire devant l’œil myope un verre de puissance négative qui fait reculer 
+                    l’image pour la replacer sur la rétine.
+                </li> <br>
+
+                <li class="lititre">
+                    <i class="fa-solid fa-eye"></i> Hypermétropie :
+                </li>
+                <li>
+                    Œil trop petit, l’image se forme virtuellement en arrière de la rétine.
+                    Le principe de la correction est d’introduire devant l’œil hypermétrope un verre de puissance positive qui fait avancer l’image 
+                    pour la replacer sur la rétine.
+                    L’hypermétropie peut passer complètement inaperçue chez le jeune enfant, dont l’œil compense ce défaut en adaptant sa puissance optique 
+                    à la distance de vision, pour obtenir une image nette. Cette capacité de mise au point appelée accommodation se fait grâce à une lentille 
+                    convexe avasculaire et élastique que l’on nomme le cristallin qui assure ainsi au niveau de l'œil, le rôle de l'objectif d'un appareil photo. 
+                    Chez les très jeunes enfants par exemple, il est possible que cet effort d'accommodation trop important soit à l'origine d'un strabisme dit accommodatif.
+                    D'autre part, l’enfant souffrant d'une forte hypermétropie, l’effort d'accommodation peut entraîner une sensation de fatigue,
+                    des maux de tête et une gêne visuelle.
+                </li> <br>
+
+                <li class="lititre">
+                    <i class="fa-solid fa-eye"></i> Astigmatisme :
+                </li>
+                <li>
+                    Déformation ou une irrégularité de la cornée. Se manifeste notamment 
+                    par des images déformées sur les côtés et par des confusions de caractères proches. (exemple : Keratocone).
+                </li> <br>
+
+                    <li class="lititre">
+                    <i class="fa-solid fa-eye"></i> Presbytie :
+                </li>
+                <li>
+                    La presbytie est une évolution naturelle de la vue qui apparaît chez chacun d’entre nous après 40 ans Le cristallin 
+                    perd une partie de son élasticité et de sa capacité d’accommodation, et provoque des difficultés en vision de près.
+                </li><br>
+
+                <li> 
+                    La mauvaise vision n’est pas seulement un problème de lunettes. Elle peut être d’origine organique. On parlera alors de malvoyance. 
+                    Cette vision peut se rééduquer et se réadapter en orthoptie. La rééducation orthoptique réadaptera la vision, par des stratégies de compensation, 
+                    permettant l’utilisation d’une zone de fixation de suppléance. La mise en place de ses stratégies est essentielle pour le développement de l’enfant.
+                </li> <br> <br>
+
+                <li class="lititre"> 
+                    Décret n° 2022-691 du 26 avril 2022 relatif aux soins visuels pouvant être réalisés sans prescription médicale par les orthoptistes : 
+                </li> <br>
+                
+                <li>
+                    Prescription de lunettes et de lentilles :
+                </li> <br>
+
+                <li>                     
+                    <i class="fa-solid fa-eye"> </i>
+                    Pour les patients âgés de 16-42 ans 
+                </li>
+
+                <li>                     
+                    <i class="fa-solid fa-eye"> </i>
+                    Avec une amétropie comprise entre -3 à +3 dioptries
+                </li>
+
+                <li>                     
+                    <i class="fa-solid fa-eye"> </i>
+                    Avec un astigmatisme inférieur à 1 dioptrie
+                </li> <br>
+
+                <li> Pour la prescription de lunettes : dernier bilan visuel réalisé par le médecin ophtalmologiste date de moins de 5 ans.
+                </li> <br>
+
+                <li> Pour la prescription de lentilles : dernier bilan visuel réalisé par le médecin ophtalmologiste date de moins de 3 ans.</li>
+                <br>
+                
+                <div class="divreeducation"> 
+                    <a class="buttonreeducation" href="{{ path('app_reeducation')}}">Réeducation Amblyopie</a>
+                </div>
+                    <br> <br>
+            </div>
+
+            <div class="containerorthodroite4">
+                <div class="imgorthodroite4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- *********************************************************************************************************************************
+**********************************************************   CONTACT    **************************************************************
+***********************************************************************************************************************************-->
+
+                    <section>
+                        <div class="box-container5com">
+                            <section class="curved">
+                            </section>
+                            <h2>Nous contacter</h2>
+                            
+                            <div class="box-container5">
+                                <div class="box-card5">
+                                    <div class="box-content5">
+                                        <ul>
+                                            <li id="about1">Camille Parage</li>
+                                            <li><a href="mailto:blabla@gmaail.com"><i class="fa-solid fa-envelope"></i> Mail@gmail.com</a></li>
+                                            <li><a href="tel:+33123456789"><i class="fa-solid fa-phone"></i> 01 23 45 67 89</a></li>
+                                            <li><i class="fa-solid fa-location-pin"></i> Adresse Cabinet</li>
+                                        </ul>                               
+                                    </div>
+                                </div>                                
+
+                                <div class="box-frame5">
+                                    <div class="box-content5" id="iframe">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10247.129420525094!2d1.4180359!3d50.0529083!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6bb001db73e410f5!2sThorel%20Clemence!5e0!3m2!1sfr!2sfr!4v1654161367173!5m2!1sfr!2sfr"
+                                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    </div>
+                                </div>
+
+                                <div class="box-card5">
+                                    <div class="box-content5">
+                                        <ul>
+                                            <li id="about1">Clemence Thorel</li>
+                                            <li><a href="mailto:blabla@gmaail.com"><i class="fa-solid fa-envelope"></i> Mail@gmail.com</a></li>
+                                            <li><a href="tel:+33123456789"><i class="fa-solid fa-phone"></i> 01 23 45 67 89</a></li>
+                                            <li><i class="fa-solid fa-location-pin"></i> Adresse Cabinet</li>
+                                        </ul> 
+
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                    </section>
+    <section>
+        <section class="curvedfooter"  id="contact">
+        </section>
+            <div class="footer">
+                <a href="https://github.com/FlorianPtf" target="_blank">Florian Ptf © | All Rights Reserved</a>
+            </div>
+
+{% endblock %}

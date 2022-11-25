@@ -1,0 +1,584 @@
+{% extends 'base.html.twig' %}
+
+{% block reeducation %}
+
+
+<!-- **********************************************************************************************************************************
+**************************************************************   HEADER    ************************************************************
+*********************************************************************************************************************************** -->
+
+
+    <header>
+         <a href="{{ path('home')}}" class="logo"> <img src="img/logo_transparent.png"> </a> 
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="{{ path('home')}}">Orthoptie</a></li>
+                <li><a href="{{ path('app_bilan')}}">Bilans</a></li>
+                <li><a href="{{ path('app_reeducation')}}">Réeducations</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<!-- *********************************************************************************************************************************
+******************************************************   PARALLAX EFFECT    **********************************************************
+***********************************************************************************************************************************-->
+
+    <div class="pimg7">
+        <p class="pimgtext">Nos Réeducations</p> 
+    </div>
+
+<!-- **********************************************************************************************************************************
+*****************************************************   PARTIE REEDUCATION     ********************************************************
+*********************************************************************************************************************************** -->
+
+    <section>
+        <div class="containerortho5">
+            <div class="containerorthogauche5" >
+                <div class="imgorthogauche5">
+                </div>
+            </div>
+
+
+            <div class="containerorthodroite5">
+                <h3> Réeducation </h3>
+                <p> La rééducation orthoptique, permet de rééduquer, de réadapter, d’améliorer, la ou les gêne(s) visuelle(s) décrite(s) par les patients dans leur vie quotidienne.
+                    La précision de l’analyse du dysfonctionnement sensorimoteur est à l’origine du projet de rééducation orthoptique
+                    Un projet de rééducation orthoptique sera proposé pour chaque patient en fonction du motif du bilan en fonction de son âge, de ses activités. 
+                    Des grands axes balisent le protocole, mais le choix des exercices et les conditions varient d’un patient à l’autre ou d’une séance à 
+                    l’autre pour un même patient.
+                </p> <br>
+
+                
+                    <li class="lititre">
+                        <i class="fa-solid fa-eye"></i> La rééducation visera à améliorer les difficultés mises en évidence tout au long du bilan:
+                    </li> <br>
+                    
+                  
+                    <li>
+                        Prise en charge d’une éventuelle amblyopie (avoir une acuité visuelle stable et la plus symétrique possible)
+                    </li> <br>
+                    <li>
+                        Permettre une fixation visuelle la plus stable possible
+                    </li> <br>
+                    <li>
+                       Travailler la motricité conjuguée (améliorer la qualité des poursuites et des saccades visuelles afin d’orienter et contrôler son regard le plus précisément possible)
+                    </li> <br>
+                    <li>
+                        Améliorer les capacités fusionnelles en absence de strabisme constant 
+                    </li> <br>
+                    <li>
+                        Améliorer la flexibilité accommodative 
+                    </li>  <br>   
+                <p> 
+                    La fréquence des séances est généralement d’une par semaine, avec une moyenne de 12 séances. Cependant, 
+                    en fonction des résultats du bilan orthoptique le rythme peut être de 2 séances par semaine à 1 séance toute les 2 ou 3 semaines. 
+                    Le nombre de séances peut varier entre 6 et 20. 
+                </p> <br>
+
+                <div class="divreeducation"> 
+                    <a class="buttonreeducation" href="{{ path('app_bilan')}}">Bilan</a> 
+                </div>
+
+
+                    <br> <br>
+            </div>
+        </div>
+
+        <div class="pimg8">
+        </div>
+
+
+<!-- **********************************************************************************************************************************
+*********************************************   PARTIE INSUFFISANCE CONVERGENCE     ***************************************************
+*********************************************************************************************************************************** -->
+
+        <div class="containerortho6">
+    
+            <div class="containerorthogauche6">
+                <h3> insuffisance de convergence </h3>
+                <p> 
+                    L’insuffisance de convergence est une difficulté à fixer un objet, un texte en vision de près. Cela peut entrainer une fatigue oculaire, 
+                    des maux de têtes, des douleurs cervicales, une vision floue/trouble ou encore double, une sensation d’instabilité, des difficultés à faire 
+                    la mise au point.
+                </p> <br>
+
+                <div class="divreeducation"> 
+                    <a class="buttonreeducation" href="{{ path('app_bilan')}}">Bilan</a>
+                </div>
+
+                    <br> <br>
+            </div>
+
+            <div class="containerorthodroite6">
+                <div class="imgorthodroite6">
+                </div>
+            </div>
+        </div>
+
+        <div class="pimg9">
+        </div>
+
+
+<!-- **********************************************************************************************************************************
+******************************************************   PARTIE STRABISME     *********************************************************
+*********************************************************************************************************************************** -->
+
+
+        <div class="containerortho7">
+            <div class="containerorthogauche7">
+                <div class="imgorthogauche7">
+                </div>
+            </div>
+
+
+            <div class="containerorthodroite7">
+                <h3> Strabisme</h3>
+                <p>
+                    Le strabisme se caractérise par un défaut d’alignement des axes visuels des 2 yeux et de coordination.
+                    Concrètement, les 2 yeux pointent dans des directions différentes, l’axe de vision n’étant donc pas aligné. Il peut être : 
+                </p> <br>
+
+
+                    <li class="lititre">
+                        <i class="fa-solid fa-eye"></i> 
+                            CONVERGENT (l’œil strabique est tourné vers l’intérieur)
+                    </li><br>
+
+                    <li class="lititre">
+                        <i class="fa-solid fa-eye"></i> 
+                            DIVERGENT (l’œil strabique est tourné vers l’extérieur)
+                    </li><br>
+
+                    <li class="lititre">
+                        <i class="fa-solid fa-eye"></i> 
+                            VERTICAL (l’œil est tourné vers le haut ou vers les bas)
+                    </li><br>
+
+                    <li><i class="fa-solid fa-eye"></i> 
+                            Le strabisme Latent : Phorie : Déviation des axes visuels maintenue latente par l’effort de fusion. 
+                            Le sens du mouvement de restitution donne le type d’hétérophorie :
+                    </li><br>
+                    <li class="lititre">
+                        <i class="fa-solid fa-eye"></i> 
+                        De l’intérieur vers l’extérieur: ésophorie
+                    </li><br>
+
+                    <li class="lititre">
+                        <i class="fa-solid fa-eye"></i> 
+                            De l’extérieur vers l’intérieur: exophorie
+                    </li><br>
+
+                    <li class="lititre">
+                        <i class="fa-solid fa-eye"></i> 
+                            Du haut vers le bas: hyperphorie
+                    </li><br>
+
+                    <li class="lititre">
+                        <i class="fa-solid fa-eye"></i> 
+                            Du bas vers le haut: hypophorie
+                    </li><br>
+
+
+                    <li><i class="fa-solid fa-eye"></i> 
+                        Le strabisme intermittent : Phorie tropie : Le patient alterne entre des états de phorie et des états de tropie.
+                        Le strabisme est constant, c’est sa compensation qui est intermittente. Aggravation d’une hétérophorie trop importante pour être compensée en permanence.                     
+                    </li> <br>
+
+                    <li><i class="fa-solid fa-eye"></i> 
+                        Le strabisme Constant (concomitant) : Tropie : Absence de fusion. Absence de limitations oculomotrices. Le plus souvent neutralisation 
+                        (l’image de l’œil dévié est supprimé) mais diplopie possible. Si l’œil dévié est toujours le meme le sujet n’alterne pas, 
+                        il y a risque d’amblyopie. Au contraire, la personne peut changer d’œil fixateur, le strabisme est alors alternant. 
+                        C’est le plus fréquent des strabismes    .                 
+                    </li> <br>
+
+                    <li><i class="fa-solid fa-eye"></i> 
+                        Strabismes incomitants : Strabismes avec une limitation oculomotrice l’angle du strabisme varie suivant les positions du regard : 
+                        paralysies oculomotrices, strabismes « mécaniques ». Généralement le patient présente une vision double, une attitude de tête, 
+                        des céphalées. Le strabisme est acquis, d’apparition brutale son origine est vasculaire, tumoral, inflammatoire…                     
+                    </li> <br>
+                <br>
+
+                <p> 
+                    Il s’agit d’une pathologie relativement fréquente dans la population générale puisqu’elle concerne 1 à 2,6% des personnes vivant en France et 
+                    toutes les tranches d’âge. Le strabisme peut ainsi toucher une personne dès la naissance ou se manifester plus tard, lors de l’enfance ou à l’âge adulte.
+                </p> <br> <br>
+
+                <div class="divreeducation"> 
+                    <a class="buttonreeducation" href="{{ path('app_bilan')}}">Bilan</a>
+                </div>
+                    <br> <br>
+            </div>
+        </div>
+
+        <div class="pimg10">
+        </div>
+
+<!-- **********************************************************************************************************************************
+******************************************************   PARTIE AMBLYOPIE        ******************************************************
+*********************************************************************************************************************************** -->
+
+
+        <div class="containerortho8">
+    
+            <div class="containerorthogauche8">
+                <h3> Amblyopie </h3>
+                <p> 
+                    L’amblyopie est une diminution plus ou moins importante de la fonction visuelle malgré le port de la correction optique. Elle est provoquée par une 
+                    altération précoce de la fonction visuelle (anisométropie, strabisme et/ou privation visuelle) avec ou sans anomalie anatomique de l’œil ou des 
+                    voies visuelles. La fixation binoculaire est impossible, pour éviter l’apparition d’une amblyopie il faut PARTAGER LE TEMPS DE FIXATION de chaque œil
+                </p> <br>
+
+                <li class="lititre">
+                    <i class="fa-solid fa-eye"></i> Le principe est simple:  
+                </li>
+                <li>
+                    Mise en place d’une correction optique adaptée au patient : correction optique totale réalisée sous cycloplégie (Skiacol ou Atropine)
+                </li> <br>
+                <li>
+                   Cacher l’œil dominant à l’aide d’une occlusion sur peau (traitement d’attaque) : Stimulation de l’œil amblyope 
+                </li> <br>
+                <li>
+                    Traitement d’entretien : pénalisation optique : filtre Ryser 
+                </li> <br>
+
+                <li class="lititre">
+                    <i class="fa-solid fa-eye"></i> L'ENJEU DE L’AMBLYOPIE: LE TRAITEMENT : 
+
+                </li>
+                <li>
+                    Les chances de récupération complète dans l’amblyopie fonctionnelle sont de 100% si la PEC est précoce
+                </li> <br>
+                <li>
+                    L’amblyopie fonctionnelle représente 99% des amblyopies
+                </li> <br>
+                <li>
+                    Objectif du traitement : isoacuité (acuité visuelle symetrique ODG) ou alternance
+                </li> <br>
+                <li>
+                    Ce défaut de développement visuel touche environ 2% des enfants.
+                </li> <br>
+
+                <li class="lititre">
+                    <i class="fa-solid fa-eye"></i> Posturologie :
+                </li>
+                <li>
+                    La posturologie se base sur l’équilibre du corps par des entrées proprioceptives : capteurs
+                    Il existe 3 capteurs : visuel, dentaire, podale
+                </li> <br>
+
+                <li>
+                    Pathologie posturale : déséquilibre des capteurs qui génère des contraintes musculaires.
+                </li><br>
+                <li>
+                    La posture est basée sur la proprioception : position des différents segments corporels les uns par rapport aux autres. 
+                </li><br>
+                <li>
+                    Lors d’un suivi postural le dérèglement de l’entrée visuelle peut être : 
+                </li><br>
+                <li>
+                    Causatif (à l’origine des troubles)
+                </li><br>
+                <li>
+                    Adaptatif (s’adapte au trouble d’un autre capteur)
+                </li><br>
+                <li>
+                    Les deux
+                </li><br>
+
+                <li class="lititre">
+                    La régulation est centrale et prend en compte trois référentiels : 
+                </li><br>
+                <li>
+                    Allocentré : référentiel visuel : information statique et dynamique
+                </li><br>
+                <li>
+                    Géocentré : référentiel gravitaire : oreille interne, équilibre
+                </li><br>
+                <li>
+                    Egocentré : information somesthésique : peau
+                </li><br>
+
+
+                <li class="lititre">
+                    Contribution de la perception visuelle dans la posture : 
+                </li><br>
+                <li><i class="fa-solid fa-eye"></i>
+                    Fonctions d’alerte
+                </li><br>
+                <li><i class="fa-solid fa-eye"></i>
+                    Positionnement du corps dans l’espace
+                </li><br>
+                <li><i class="fa-solid fa-eye"></i>
+                    Modulation  tonique du corps
+                </li><br>
+                <li><i class="fa-solid fa-eye"></i>
+                    Guidage des bras dans la capture d’objets
+                </li><br>
+                <li><i class="fa-solid fa-eye"></i>
+                    Exploration focale, centrale et panoramique
+                </li><br>
+                <li><i class="fa-solid fa-eye"></i>
+                    Régulation de la marche
+                </li><br>
+                <li><i class="fa-solid fa-eye"></i>
+                   Orientation et stabilisation du corps
+                </li><br>
+
+
+                <li class="lititre">
+                    Tests posturaux :  
+                </li><br>
+                <li><i class="fa-solid fa-eye"></i>
+                    Test rotation cervicale : yeux ouverts, dents serrées, avec ou sans lunettes, sur mousse ou semelles
+                </li><br>
+                <li><i class="fa-solid fa-eye"></i>
+                    Test de piétinement : 30 pas en « majorette » yeux fermés avec variantes
+                </li><br>
+                <li><i class="fa-solid fa-eye"></i>
+                    Test des pouces : le patient enroule la tête, le dos et descend les mains vers le sol. Les pouces de l’examinateur sont posés sur l’ilio-costal
+                </li><br>
+                <li><i class="fa-solid fa-eye"></i>
+                    Test scapulaire arrière : yeux ouverts, dents serrées avec ou sans lunettes
+                </li><br>
+                <li><i class="fa-solid fa-eye"></i>
+                    On mesure les angles de déviations des axes visuels dans différentes position : mâchoire serré, pied levé, assis, debout… 
+                </li><br>
+
+                <li>
+                    Ces tests simples permettent de déterminer les capteurs déréglés et leur nature (causatif, adaptatif …) et l’utilité des prothèses (lunettes, semelles, gouttières…)
+                </li><br>
+
+                
+                <div class="divreeducation"> 
+                    <a class="buttonreeducation" href="{{ path('app_bilan')}}">Bilan</a>
+                </div>
+                    <br> <br>
+            </div>
+
+            <div class="containerorthodroite8">
+                <div class="imgorthodroite8">
+                </div>
+            </div>
+        </div>
+
+        <div class="pimg11">
+        </div>
+
+<!-- **********************************************************************************************************************************
+**************************************   PARTIE NEUROVISUEL TROUBLES DES APPRENTISSAGES        ****************************************
+*********************************************************************************************************************************** -->
+
+                <div class="containerortho9">
+            <div class="containerorthogauche9">
+                <div class="imgorthogauche9">
+                </div>
+            </div>
+
+
+            <div class="containerorthodroite9">
+                <h3> REEDUCATION : NEUROVISUEL ET TROUBLE DES APPRENTISSAGES : </h3>
+                <p>
+                    La rééducation neurovisuel ne se limite pas à la possibilité de l’acte de voir, à la prise en charge du VOIR net et simple. 
+                    La vision doit être endurante en statique et en dynamique. L’exploration visuelle installée, l’orthoptiste s’occupe de la mise en place des deux voies 
+                    de la perception visuelle (la voie du OU pour l’ACTION et la voie du QUOI pour la PERCEPTION). 
+                </p> <br>
+
+
+                    <li class="lititre">
+                        <i class="fa-solid fa-eye"></i> 
+                            La fonction visuelle est une fonction instrumentale à rééduquer : 
+                    </li><br>
+
+                    <li><i class="fa-solid fa-eye"></i> 
+                        Le regard anticipe les gestes
+                    </li><br>
+                    <li><i class="fa-solid fa-eye"></i> 
+                        Le regard contribue aux apprentissages
+                    </li><br>
+                    <li><i class="fa-solid fa-eye"></i> 
+                        Le regard soutient et nourrit la communication.
+                    </li><br>
+
+                    <li>
+                        Notre objectif sur le plan visuel est de proposer des exercices afin de développer l'attention, la mémoire visuelle, l’anticipation visuelle, 
+                        la représentation dans l'espace, la coordination œil-main et d'acquérir des poursuites et des saccades plus performantes. L’orthoptiste cherche 
+                        à améliorer les capacités d’analyse perceptive grâce à l’utilisation de jeux, l’outil informatique, des supports papiers… il peut également mettre 
+                        en place des aménagements scolaires (pupitres ; lignage contrasté, matérialiser les contours, grossir les supports écrits, mono consigne, limité la 
+                        double « taches », utilisation d’un code couleur, texte à trou, temps supplémentaires…)                    
+                    </li><br>
+
+                    <li>
+                        La rééducation neurovisuel, permet d’aider, d’orienter le diagnostique en complémentarité avec les autres professions paramédicales 
+                        (orthophoniste, ergothérapeute, psychomotricien)                  
+                    </li><br>
+
+                    <li>
+                        Il ne s’agit pas de guérir ses troubles, mais de chercher avec l’enfant des moyens de compensations adaptés.                  
+                    </li><br>
+
+
+
+                <div class="divreeducation"> 
+                    <a class="buttonreeducation" href="{{ path('app_bilan')}}">Bilan</a>
+                </div>
+                    <br> <br>
+            </div>
+        </div>
+
+        <div class="pimg12">
+        </div>
+
+<!-- *********************************************************************************************************************************
+*********************************************   DEFICIENCE VISUELLE BASSE VISION    **************************************************
+***********************************************************************************************************************************-->
+
+
+        <div class="containerortho10">
+    
+            <div class="containerorthogauche10">
+                <h3> REEDUCATION BASSE VISION </h3>
+                <p> 
+                    La rééducation orthoptique basse vision est l’ensemble des techniques visant à utiliser la vision restante, avec ou sans aide optique dans la 
+                    réalisation des activités quotidiennes (lire, cuisiner, bricoler, se déplacer).
+                    La rééducation basse vision s’appuie sur les principes de rééducation fonctionnelle d’après la Classification Internationale du Handicap (CIH) 
+                    établie par Philip WOOD en 1980 : 
+                </p> <br>
+
+                <li class="lititre">
+                    <i class="fa-solid fa-eye"></i> Le handicap en 3 points généraux : 
+                </li>
+                <li>
+                    La déficience psychologique, physiologique ou anatomique. Elle correspond à l'aspect lésionnel du handicap.                </li> <br>
+                <li>
+                    L'incapacité, qui est une réduction partielle ou totale d'une capacité. Elle correspond à l'aspect fonctionnel du handicap. 
+                </li> <br>
+                <li>
+                    Le désavantage pour l'insertion sociale, scolaire ou professionnelle. Il correspond à l'aspect situationnel du handicap
+                </li> <br>
+
+                <li class="lititre">
+                    <i class="fa-solid fa-eye"></i> Rééducation atteinte centrale : scotome centrale (DMLA, stargart…)
+
+                <li>
+                    Excentration à choisir en fonction du champ visuel réalisé en bilan
+                </li> <br>
+                <li>
+                    Coordination oculo-manuelle
+                </li> <br>
+                <li>
+                    Saccades
+                </li> <br>
+                <li>
+                    Balayage 
+                </li> <br>
+
+
+                <li class="lititre">
+                    <i class="fa-solid fa-eye"></i> Rééducation atteinte périphérique : (glaucome, rétinite pigmentaire…) :
+                <li>
+                    Prise d’informations visuelles dans l’espace
+                </li> <br>
+                <li>
+                    Saccades                
+                </li> <br>
+                <li>
+                    Balayage                
+                </li> <br>
+
+                <li class="lititre">
+                    <i class="fa-solid fa-eye"></i> Diffèrent exercices sont proposés aux patients : 
+                <li>
+                    Coordination oculo-manuelle
+                </li> <br>
+                <li>
+                    Saccades (Retour à la ligne)
+                </li> <br>
+                <li>
+                    Poursuites 
+                </li> <br>
+                <li>
+                    Stratégie visuelle
+                </li> <br>
+                <li>
+                    Représentation spatiale
+                </li> <br>
+                <li>
+                    Représentation mentale 
+                </li> <br>
+                <li>
+                    Discrimination 
+                </li> <br>
+                <li>
+                    Orientation 
+                </li> <br>
+                <li>
+                    Forme juxtaposé 
+                </li> <br>
+
+                <div class="divreeducation"> 
+                    <a class="buttonreeducation" href="{{ path('app_bilan')}}">Bilan</a>
+                </div>
+                    <br> <br>
+            </div>
+
+            <div class="containerorthodroite10">
+                <div class="imgorthodroite10">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+<!-- *********************************************************************************************************************************
+**********************************************************   CONTACT    **************************************************************
+***********************************************************************************************************************************-->
+
+                    <section>
+                        <div class="box-container5com">
+                            <section class="curved">
+                            </section>
+                            <h2>Nous contacter</h2>
+                            
+                            <div class="box-container5">
+                                <div class="box-card5">
+                                    <div class="box-content5">
+                                        <ul>
+                                            <li id="about1">Camille Parage</li>
+                                            <li><a href="mailto:blabla@gmaail.com"><i class="fa-solid fa-envelope"></i> Mail@gmail.com</a></li>
+                                            <li><a href="tel:+33123456789"><i class="fa-solid fa-phone"></i> 01 23 45 67 89</a></li>
+                                            <li><i class="fa-solid fa-location-pin"></i> Adresse Cabinet</li>
+                                        </ul>                               
+                                    </div>
+                                </div>                                
+
+                                <div class="box-frame5">
+                                    <div class="box-content5" id="iframe">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10247.129420525094!2d1.4180359!3d50.0529083!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6bb001db73e410f5!2sThorel%20Clemence!5e0!3m2!1sfr!2sfr!4v1654161367173!5m2!1sfr!2sfr"
+                                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    </div>
+                                </div>
+
+                                <div class="box-card5">
+                                    <div class="box-content5">
+                                        <ul>
+                                            <li id="about1">Clemence Thorel</li>
+                                            <li><a href="mailto:blabla@gmaail.com"><i class="fa-solid fa-envelope"></i> Mail@gmail.com</a></li>
+                                            <li><a href="tel:+33123456789"><i class="fa-solid fa-phone"></i> 01 23 45 67 89</a></li>
+                                            <li><i class="fa-solid fa-location-pin"></i> Adresse Cabinet</li>
+                                        </ul> 
+
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                    </section>
+    <section>
+        <section class="curvedfooter"  id="contact">
+        </section>
+            <div class="footer">
+                <a href="https://github.com/FlorianPtf" target="_blank">Florian Ptf © | All Rights Reserved</a>
+            </div>
+
+{% endblock %}
