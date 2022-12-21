@@ -12,12 +12,18 @@
          <a href="{{ path('home')}}" class="logo"> <img src="img/logo_transparent.png"> </a> 
 
         <nav class="navbar">
-            <ul>
-                <li><a href="{{ path('home')}}">Orthoptie</a></li>
+            <ul class="navlinks">
+                <li><a href="{{ path('home')}}">Accueil</a></li>
+                <li><a href="{{ path('app_orthoptie')}}">Orthoptie</a></li>
                 <li><a href="{{ path('app_bilan')}}">Bilans</a></li>
                 <li><a href="{{ path('app_reeducation')}}">Réeducations</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="link">Contact</a></li>
             </ul>
+            <div class="burger">
+                <div class="line1"></div>                
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
         </nav>
     </header>
 
@@ -284,80 +290,6 @@
         </div>
     </div>
 
-
-
-<!-- *********************************************************************************************************************************
-**********************************************************   CONTACT    **************************************************************
-***********************************************************************************************************************************-->
-
-                    <section>
-                        <div class="box-container5com">
-                            <section class="curved">
-                            </section>
-                            <h2>Nous contacter</h2>
-                            
-                            <div class="box-container5">
-                                <div class="box-card5">
-                                    <div class="box-content5">
-                                        <ul>
-                                            <li id="about1">Camille Parage</li>
-                                            <li><a href="mailto:blabla@gmaail.com"><i class="fa-solid fa-envelope"></i> Mail@gmail.com</a></li>
-                                            <li><a href="tel:+33123456789"><i class="fa-solid fa-phone"></i> 01 23 45 67 89</a></li>
-                                            <li><i class="fa-solid fa-location-pin"></i> Adresse Cabinet</li>
-                                        </ul>                               
-                                    </div>
-                                </div>                                
-
-                                <div class="box-frame5">
-                                    <div class="box-content5" id="iframe">
-                                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10247.129420525094!2d1.4180359!3d50.0529083!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6bb001db73e410f5!2sThorel%20Clemence!5e0!3m2!1sfr!2sfr!4v1654161367173!5m2!1sfr!2sfr"
-                                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                    </div>
-                                </div>
-
-                                <div class="box-card5">
-                                    <div class="box-content5">
-                                        <ul>
-                                            <li id="about1">Clemence Thorel</li>
-                                            <li><a href="mailto:blabla@gmaail.com"><i class="fa-solid fa-envelope"></i> Mail@gmail.com</a></li>
-                                            <li><a href="tel:+33123456789"><i class="fa-solid fa-phone"></i> 01 23 45 67 89</a></li>
-                                            <li><i class="fa-solid fa-location-pin"></i> Adresse Cabinet</li>
-                                        </ul> 
-
-                                    </div>
-                                </div>    
-                            </div>
-                        </div>
-                    </section>
-
-    <section>
-        <section class="curvedfooter"  id="contact">
-        </section>
-            <div class="footer">
-                <a href="https://github.com/FlorianPtf" target="_blank">Florian Ptf © | All Rights Reserved</a>
-            </div>
-    </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <script src="/js/scriptmenu.js"></script>
 
 {% endblock %}

@@ -1,59 +1,5 @@
 $(function() {
     /**
-    * Smooth scrolling to page anchor on click
-    **/
-     $("a[href*='#orthoptie']:not([href='#'])").click(function() {
-      if (
-          location.hostname == this.hostname
-          && this.pathname.replace(/^\//,"") == location.pathname.replace(/^\//,"")
-      ) {
-          var anchor = $(this.hash);
-          anchor = anchor.length ? anchor : $("[name=" + this.hash.slice(1) +"]");
-          if ( anchor.length ) {
-              $("html, body").animate( { scrollTop: anchor.offset().top }, 1000);
-          }
-      }
-  });
-    $("a[href*='#bilan']:not([href='#'])").click(function() {
-        if (
-            location.hostname == this.hostname
-            && this.pathname.replace(/^\//,"") == location.pathname.replace(/^\//,"")
-        ) {
-            var anchor = $(this.hash);
-            anchor = anchor.length ? anchor : $("[name=" + this.hash.slice(1) +"]");
-            if ( anchor.length ) {
-                $("html, body").animate( { scrollTop: anchor.offset().top }, 1500);
-            }
-        }
-    });
-    $("a[href*='#reeducation']:not([href='#'])").click(function() {
-      if (
-          location.hostname == this.hostname
-          && this.pathname.replace(/^\//,"") == location.pathname.replace(/^\//,"")
-      ) {
-          var anchor = $(this.hash);
-          anchor = anchor.length ? anchor : $("[name=" + this.hash.slice(1) +"]");
-          if ( anchor.length ) {
-              $("html, body").animate( { scrollTop: anchor.offset().top }, 2000);
-          }
-      }
-  });$("a[href*='#contact']:not([href='#'])").click(function() {
-    if (
-        location.hostname == this.hostname
-        && this.pathname.replace(/^\//,"") == location.pathname.replace(/^\//,"")
-    ) {
-        var anchor = $(this.hash);
-        anchor = anchor.length ? anchor : $("[name=" + this.hash.slice(1) +"]");
-        if ( anchor.length ) {
-            $("html, body").animate( { scrollTop: anchor.offset().top }, 4000);
-        }
-    }
-});
-});
-
-
-$(function() {
-    /**
     * Smooth scrolling to the top of page !
     **/
     $("html, body").animate({scrollTop : 0}, 1500);

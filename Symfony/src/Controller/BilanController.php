@@ -15,4 +15,12 @@ class BilanController extends AbstractController
             'controller_name' => 'BilanController',
         ]);
     }
+
+    #[Route('/bilan1', name: 'app_bilan1')]
+    public function bilan1(): Response
+    {
+        return $this->render('bilan/index.html.twig', array('_fragment' => 'bilan1'),[
+            'controller_name' => 'BilanController',
+        ]);
+    }
 }

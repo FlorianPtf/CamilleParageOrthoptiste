@@ -1,18 +1,6 @@
 var counter = 1;
 var slider = document.querySelector(".slider2");
 
-const images = document.getElementsByClassName("image");
-
-    [...images].forEach(image => {
-
-     image.addEventListener("click", function() {
-        clearInterval(autoslide);
-         counter = this.id[1]
-        })
-    }
-    )
-
-
 var autoslide;
 
 var repeatslide = () => {
@@ -24,7 +12,7 @@ autoslide = setInterval(function(){
         counter = 1;
         
     }
-}, 3000); }
+}, 2000); }
 
 repeatslide();
 
@@ -37,10 +25,37 @@ slider.addEventListener("mouseout", () => {
 })
 
 
-const menuHamburger = document.querySelector(".burger")
-const navLinks = document.querySelector(".navlinks")
+const menuHamburger = document.querySelector(".burger");
+const navLinks = document.querySelector(".navlinks");
+const burgerLine = document.querySelector(".burger");
+const link = document.querySelector(".link");
+const link1 = document.querySelector(".link1");
+const link2 = document.querySelector(".link2");
+const link3 = document.querySelector(".link3");
+
 
 menuHamburger.addEventListener('click', ()=>{
     navLinks.classList.toggle('mobile-menu');
-    console.log("Clic");
-})
+    burgerLine.classList.toggle('mobile-menu');
+});
+
+link.addEventListener('click', ()=>{
+    navLinks.classList.toggle('mobile-menu');
+    burgerLine.classList.toggle('mobile-menu');
+});
+
+link1.addEventListener('click', ()=>{
+    navLinks.classList.toggle('mobile-menu');
+    burgerLine.classList.toggle('mobile-menu');
+});
+
+link2.addEventListener('click', ()=>{
+    navLinks.classList.toggle('mobile-menu');
+    burgerLine.classList.toggle('mobile-menu');
+});
+
+link3.addEventListener('click', ()=>{
+    navLinks.classList.toggle('mobile-menu');
+    burgerLine.classList.toggle('mobile-menu');
+});
+

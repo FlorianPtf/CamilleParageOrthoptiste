@@ -1,13 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
 
 :root{
-    --couleur1: rgb(211, 228, 205);
-    --couleur2: rgb(153, 167, 153);
-    --couleur3: rgb(242, 221, 193);
-    --couleur4: rgb(226, 194, 185);
+    --couleur1: #d3e4cd;
+    --couleur2: #99a799;
+    --couleur3: #f2ddc1;
+    --couleur4: #e2c2b9;
 
     --couleur5: rgba(211, 228, 205, 0.5);
     --couleur6: rgba(153, 167, 153, 0.5);
@@ -25,6 +23,7 @@
     box-sizing: border-box;
     text-decoration: none;
     font-family: 'Libre Baskerville', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -244,7 +243,7 @@ body::-webkit-scrollbar-thumb
 header{
     background: var(--couleur2);
     width: 100%;
-    height: 8vh;
+    height: 15vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -326,18 +325,19 @@ header .navbar ul li:hover a:after{
 }
 
 
-@media screen and (max-width : 1024px){
+@media screen and (max-width : 1250px){
     header .navbar ul li a{
         font-size: 14px;
     }
 }
 
-@media screen and (max-width : 950px ){
+@media screen and (max-width : 1080px ){
 
     .navbar{
         position:static;
         z-index: 10;
         overflow: hidden;
+        overflow-x: hidden;
     }
 
     .burger{
@@ -354,7 +354,7 @@ header .navbar ul li:hover a:after{
         backdrop-filter: blur(10px);
         width: 100vw;
         height: 100vh;
-        display: flex;
+        display: none;
         justify-content: center;
         align-items: center;
         flex-direction: column;
@@ -364,33 +364,32 @@ header .navbar ul li:hover a:after{
     }
 
     .navlinks.mobile-menu{
+        display: flex;
         right: 0%;
         opacity: 1;
+        padding: 0;
     }
 
-    .navlinks.mobile-menu .burger .line1{
-        transform: rotate(45deg) translate(0.75em, 1.25em);
+    .burger.mobile-menu .line1{
+        transform: translate(-2px, 9px) rotate(45deg);
+        width: 100%;
         transition: 0.5s ease-out;
     }
 
-
-    /* A FAIRE MENU BURGER !!! */
-
-    .navlinks.mobile-menu .burger:nth-child(2){
-        transform: scale(0.1);
+    .burger.mobile-menu .line2{
         transition: 0.5s ease-out;
+        transform: scale(0);
     }
 
-    .navlinks.mobile-menu .burger:nth-child(3){
-        transform: rotate(135deg) translate(-0.5em, 1em);
+    .burger.mobile-menu .line3{
+        transform: translate(-2px, -9px) rotate(-45deg);
+        width: 100%;
         transition: 0.5s ease-out;
     }
 
     header .navbar ul li a{
         font-size: 32px;
     }
-
-
 }
 
 
@@ -433,7 +432,6 @@ header .navbar ul li:hover a:after{
     position: relative;
     display: flex;
     justify-content: center;
-    flex-direction: column;
     text-align: center;
     width: 60%;
     margin-left: 20%;
@@ -442,7 +440,6 @@ header .navbar ul li:hover a:after{
 
 .box-container2 .box2-complete .box2-milieu h3{
     display: flex;
-    /* color: white; */
     justify-content: center;
     font-size: 28px;
     animation: transitionheaderin 1500ms ease-in-out;
@@ -453,22 +450,8 @@ header .navbar ul li:hover a:after{
     text-align: center;
     font-size: 14px;
     margin-bottom: 2%;
-    /* color: rgb(80, 80, 80); */
-    /* color: rgb(255, 255, 255); */
     animation: transitionheaderin 1500ms ease-in-out;
 }
-
-/* .imgbgecriture{
-
-    background-image: url("/img/Oeil1.jpg");
-    min-height: 50vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    opacity: 0.9;
-    background-attachment: fixed;
-} */
 
 /***********************************************************************************************************************************
 *****************************************************   CARD ROND 1   **************************************************************
@@ -885,29 +868,62 @@ header .navbar ul li:hover a:after{
 *******************************************************   CSS GRID      ************************************************************
 ***********************************************************************************************************************************/
 
-@media all and (min-width: 1360px) and (max-width: 2000px){  
-.wrapper {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 10px;
-    grid-auto-rows: minmax(100px, 100px);
-  }
+@media all and (min-width: 1360px){  
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 10px;
+        grid-auto-rows: minmax(100px, 100px);
+    }
 
-.gridone {
-    grid-column: 1 / 3;
-    grid-row: 1 / 2;
+    .gridone {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+    }
+
+    .gridtwo {
+        grid-column: 3 / 5;
+        grid-row: 2 / 3;
+    }
+
+    .gridthree {
+        grid-column: 2;
+        grid-row: 5 / 5;
+    }
 }
 
-.gridtwo {
-    grid-column: 3 / 5;
-    grid-row: 2 / 3;
+@media all and (min-width: 1360px) and (max-height: 900px){  
+    .wrapper{
+        height: 110vh;
+    }
 }
 
-.gridthree {
-    grid-column: 2;
-    grid-row: 5 / 5;
+@media all and (min-width: 1360px) and (max-height: 800px){  
+    .wrapper{
+        min-height: 130vh;
+    }
 }
+
+@media all and (min-width: 1360px) and (max-height: 700px){  
+    .wrapper{
+        min-height: 150vh;
+    }
 }
+
+@media all and (min-width: 1360px) and (max-height: 600px){  
+    .wrapper{
+        min-height: 170vh;
+    }
+}
+
+@media all and (min-width: 1360px) and (max-height: 500px){  
+    .wrapper{
+        min-height: 190vh;
+    }
+}
+
+
+
 
 
 
@@ -1085,7 +1101,7 @@ header .navbar ul li:hover a:after{
 
 .box-container3 .container-card3 .container-box3 .container-content3 h3{
     font-size: 1.5em;
-    color: rgb(119, 119, 119);
+    color: var(--couleur4);
     z-index: 1;
     transition:0.5s;
 }
@@ -1712,6 +1728,7 @@ header .navbar ul li:hover a:after{
     font-size: 64px;
     text-transform: uppercase;
     animation: transitiontitrein 2s ease-in-out;
+    text-align: center;
 }
 
 .pimg7 .pimgtext{
@@ -1723,6 +1740,7 @@ header .navbar ul li:hover a:after{
     font-size: 64px;
     text-transform: uppercase;
     animation: transitiontitrein 2s ease-in-out;
+    text-align: center;
 }
 
 .pimg13 .pimgtext{
@@ -1734,6 +1752,7 @@ header .navbar ul li:hover a:after{
     font-size: 64px;
     text-transform: uppercase;
     animation: transitiontitrein 2s ease-in-out;
+    text-align: center;
 }
 
 /***********************************************************************************************************************************
@@ -1742,7 +1761,7 @@ header .navbar ul li:hover a:after{
 
 
 .slider{
-    height: 100vh;
+    min-height: 100vh;
     border-top: 20px solid;
     border-image: linear-gradient(90deg, var(--couleur3) 0% , var(--couleur4) 100%) 1;   
     user-select: none;
@@ -1830,6 +1849,11 @@ header .navbar ul li:hover a:after{
 }
 
 
+.slidermobile{
+    display: none;
+}
+
+
 /***********************************************************************************************************************************
 **********************************************************   CONTACT    ************************************************************
 ***********************************************************************************************************************************/
@@ -1846,7 +1870,7 @@ header .navbar ul li:hover a:after{
 
 
 .box-container5com{
-    height: 70vh;
+    min-height: 70vh;
     background: linear-gradient(90deg, rgba(211,228,205,1) 0%, rgba(153,167,153,1) 100%);
 }
 
@@ -1874,6 +1898,8 @@ header .navbar ul li:hover a:after{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0;
+    margin: 0;
 }
 
 .box-container5com li{
@@ -1960,7 +1986,7 @@ header .navbar ul li:hover a:after{
 
 .footer a{
     color: rgb(0, 0, 0);
-    font-size: 20px;
+    font-size: 18px;
     text-decoration: none;
 }
 
@@ -1970,7 +1996,7 @@ header .navbar ul li:hover a:after{
     height: 15vh;
   }
   
-  .curvedfooter::after {
+.curvedfooter::after {
     content: '';
     border-top-left-radius: 50% 100%;
     border-top-right-radius: 50% 100%;
@@ -1979,7 +2005,39 @@ header .navbar ul li:hover a:after{
     width: 100%;
     background: rgb(255, 255, 255);
     height: 30%;
-  }
+}
+
+.scrolltotop{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--couleur3);
+    border-radius: 50%;
+    background-size: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 100;
+    text-decoration: none;
+    text-align: center;
+    line-height: 60px;
+    font-size: 28px;
+    color: white;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.scrolltotop.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.scrolltotop.active:hover{
+    transform: translateY(-20%);
+}
 
 
 
@@ -2012,6 +2070,7 @@ header .navbar ul li:hover a:after{
     background-size: cover;
     background-position: center;
     margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .imgorthogauche1:hover{
@@ -2058,6 +2117,7 @@ header .navbar ul li:hover a:after{
     background-size: cover;
     background-position: center;
     margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .imgorthodroite2:hover{
@@ -2070,7 +2130,7 @@ header .navbar ul li:hover a:after{
     min-width: 40%;
     margin-top: 5%;
     margin-right: 5%;
-    margin-left: 10%;
+    margin-left: 5%;
 }
 
 .containerorthogauche2 h3{
@@ -2107,6 +2167,7 @@ header .navbar ul li:hover a:after{
     background-size: cover;
     background-position: center;
     margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .imgorthogauche3:hover{
@@ -2153,6 +2214,7 @@ header .navbar ul li:hover a:after{
     background-size: cover;
     background-position: center;
     margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .imgorthodroite4:hover{
@@ -2165,7 +2227,7 @@ header .navbar ul li:hover a:after{
     min-width: 40%;
     margin-top: 5%;
     margin-right: 5%;
-    margin-left: 10%;
+    margin-left: 5%;
 }
 
 .containerorthogauche4 h3{
@@ -2200,6 +2262,7 @@ header .navbar ul li:hover a:after{
     background-size: cover;
     background-position: center;
     margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .imgorthogauche5:hover{
@@ -2247,6 +2310,7 @@ header .navbar ul li:hover a:after{
     background-size: cover;
     background-position: center;
     margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .imgorthodroite6:hover{
@@ -2259,7 +2323,7 @@ header .navbar ul li:hover a:after{
     min-width: 40%;
     margin-top: 5%;
     margin-right: 5%;
-    margin-left: 10%;
+    margin-left: 5%;
 }
 
 .containerorthogauche6 h3{
@@ -2294,6 +2358,7 @@ header .navbar ul li:hover a:after{
     background-size: cover;
     background-position: center;
     margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .imgorthogauche7:hover{
@@ -2339,7 +2404,8 @@ header .navbar ul li:hover a:after{
     background: url("/img/bilanbassevision2.jpeg");
     background-size: cover;
     background-position: center;
-    margin-top: 5%;
+    margin-top: 5%;    
+    margin-bottom: 5%;
 }
 
 .imgorthodroite8:hover{
@@ -2352,7 +2418,7 @@ header .navbar ul li:hover a:after{
     min-width: 40%;
     margin-top: 5%;
     margin-right: 5%;
-    margin-left: 10%;
+    margin-left: 5%;
 }
 
 .containerorthogauche8 h3{
@@ -2387,6 +2453,7 @@ header .navbar ul li:hover a:after{
     background-size: cover;
     background-position: center;
     margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .imgorthogauche9:hover{
@@ -2433,6 +2500,7 @@ header .navbar ul li:hover a:after{
     background-size: cover;
     background-position: center;
     margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .imgorthodroite10:hover{
@@ -2445,7 +2513,7 @@ header .navbar ul li:hover a:after{
     min-width: 40%;
     margin-top: 5%;
     margin-right: 5%;
-    margin-left: 10%;
+    margin-left: 5%;
 }
 
 .containerorthogauche10 h3{
@@ -2568,7 +2636,7 @@ table{
 .containerortho11 .containercontent11{
     justify-content: center;
     text-align: justify;
-    width: 50vw;
+    width: 60vw;
     margin-top: 3%;
     text-decoration: none;
     list-style: none;
@@ -2627,7 +2695,7 @@ table{
 .containerortho12 .containercontent12{
     justify-content: center;
     text-align: justify;
-    width: 50vw;
+    width: 60vw;
     margin-top: 3%;
     text-decoration: none;
     list-style: none;
@@ -2673,4 +2741,865 @@ table{
 *************************************************   MEADIA QUERIES   ***************************************************************
 ***********************************************************************************************************************************/
 
+/***********************************************************************************************************************************
+*************************************************   300PX - 425PX MOBILE   *********************************************************
+***********************************************************************************************************************************/
 
+@media all and (min-width: 300px) and (max-width: 424px){
+
+    header{
+        min-height: 20vh;
+    }
+
+    .navlinks.mobile-menu li{
+        margin: 20px;
+    }
+
+    .navlinks.mobile-menu a{
+        font-size: 24px;
+    }
+
+    .imgbgecriture{
+        width: 400%;
+        top: 0%;
+        left: -90%;
+    }
+
+    .gridone{
+        margin-bottom: 5%;
+    }
+
+    .gridtwo{
+        margin-bottom: 5%;
+    }
+    .gridthree{
+        margin-bottom: 10%;
+    }
+
+    .square, .square2, .square3{
+        width: 300px;
+        height: 300px;
+    }
+
+    .square span:nth-child(4)
+{
+    background-image: url("/img/optic_9.jpg");
+    background-position: right 30px bottom 0px;
+}
+
+    .square .content h4,
+    .square2 .content h4,
+    .square3 .content h4{
+        font-size: 24px;
+        color: var(--couleur2);
+    }
+
+    .square .content p,
+    .square2 .content p,
+    .square3 .content p{
+        font-size: 14px;
+    }
+
+    .box-container3com{
+        background-position: 40% 40%;
+    }
+
+    .box-container3com p{
+        font-size: 36px;
+    }
+
+    .box-container4 .container-card4{
+        width: 300px;
+        height: 480px;
+    }
+
+    .box-container4com p{
+        font-size: 36px;
+    }
+
+    .box-container4 .container-card4 .container-box4 .container-content4 p{
+        font-size: 18px;
+        font-weight: 500;
+        opacity: 1;
+    }
+
+    .box-container4 .container-card4 #optic1,
+    .box-container4 .container-card4 #optic2,
+    .box-container4 .container-card4 #optic3,
+    .box-container4 .container-card4 #optic4,
+    .box-container4 .container-card4 #optic5{
+        opacity: 0.95;
+    }
+
+    .slider{
+        min-height: 80vh;
+        margin-bottom: 5%;
+        display: none;
+    }
+
+    .slidermobile{
+        display: flex;
+        min-height: 100%;
+        width: auto;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-image: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%,rgba(255, 255, 255, 0.2) 30%, rgba(255, 255, 255, 0) 100%), url("/img/bg_ortho6.jpg");
+        border-top: 20px solid;
+        border-image: linear-gradient(90deg, var(--couleur3) 0% , var(--couleur4) 100%) 1;
+    }
+
+    .cardslider1{
+        width: 280px;
+        height: 240px;
+        margin: 5%;
+        border: 2px solid var(--couleur2);
+        border-radius: 50px;
+        background: url("/img/bg_ortho1.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: center;
+    }
+
+    .cardslider2{
+        width: 280px;
+        height: 240px;
+        margin: 5%;
+        border: 2px solid var(--couleur2);
+        border-radius: 50px;
+        background: url("/img/bg_ortho2.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: center;
+    }
+
+    .cardslider3{
+        width: 280px;
+        height: 240px;
+        margin: 5%;
+        border: 2px solid var(--couleur2);
+        border-radius: 50px;
+        background: url("/img/optic_3.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: center;
+    }
+
+    .cardslider4{
+        width: 280px;
+        height: 240px;
+        margin: 5%;
+        border: 2px solid var(--couleur2);
+        border-radius: 50px;
+        background: url("/img/optic_4.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: center;
+    }
+
+    .cardslider5{
+        width: 280px;
+        height: 240px;
+        margin: 5%;
+        border: 2px solid var(--couleur2);
+        border-radius: 50px;
+        background: url("/img/optic_9.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: center;
+    }
+
+    .box-container5com h2{
+        font-size: 50px;
+    }
+
+    .box-container5{    
+        flex-direction: column;
+        padding: 5%;
+    }
+
+    .box-card5, .box-frame5{
+        margin: 5%;
+    }
+
+    .box-card5{
+        width: 250px;
+        height: 350px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    #iframe{
+        width: 250px;
+        height: 350px;
+    }
+
+    .box-content5 iframe{
+        width: 250px;
+        height: 350px;    
+    }
+
+    .box-content5 a, .box-content5 li{
+        font-size: 20px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box-container5com #about1{
+        font-size: 20px;
+    }
+
+    .containerortho11 .containercontent11,
+    .containerortho12 .containercontent12 {
+        width: 80vw;
+        text-align: left;
+    }
+
+    .pimg2 .pimgtext,
+    .pimg7 .pimgtext,
+    .pimg13 .pimgtext {
+        font-size: 30px;
+    }
+
+    .pimg13{
+        background-position: 0% 0%;
+    }
+
+    .pimg1,
+    .pimg2,
+    .pimg3,
+    .pimg4,
+    .pimg5,
+    .pimg6,
+    .pimg7,
+    .pimg8,
+    .pimg9,
+    .pimg10,
+    .pimg11,
+    .pimg12,
+    .pimg13,
+    .pimg14{
+        background-attachment: scroll;
+    }
+
+    .containerortho1,
+    .containerortho2,
+    .containerortho3,
+    .containerortho4,
+    .containerortho5,
+    .containerortho6,
+    .containerortho7,
+    .containerortho8,
+    .containerortho9,
+    .containerortho10{
+        flex-direction: column;
+    }
+
+    .containerorthodroite1,
+    .containerorthogauche2,
+    .containerorthodroite3,
+    .containerorthogauche4,
+    .containerorthodroite5,
+    .containerorthogauche6,
+    .containerorthodroite7,
+    .containerorthogauche8,
+    .containerorthodroite9,
+    .containerorthogauche10{
+        margin-left: 5%;
+    }
+
+    .imgorthogauche1,
+    .imgorthodroite2,
+    .imgorthogauche3,
+    .imgorthodroite4,
+    .imgorthogauche5,
+    .imgorthodroite6,
+    .imgorthogauche7,
+    .imgorthodroite8,
+    .imgorthogauche9,
+    .imgorthodroite10{
+        width: 300px;
+        height: 450px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        border: none;
+    } 
+
+    .scrolltotop{
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 20px;
+    }
+
+}
+
+
+/***********************************************************************************************************************************
+*********************************************   425PX - 600PX PETITE TABLETTE   ****************************************************
+***********************************************************************************************************************************/
+
+
+@media all and (min-width: 425px) and (max-width: 599px){
+    header{
+        min-height: 20vh;
+    }
+
+    .navlinks.mobile-menu a{
+        font-size: 24px;
+    }
+
+    .imgbgecriture{
+        width: 400%;
+        top: 0%;
+        left: -90%;
+    }
+
+    .gridone{
+        margin-bottom: 5%;
+    }
+
+    .gridtwo{
+        margin-bottom: 5%;
+    }
+    .gridthree{
+        margin-bottom: 10%;
+    }
+
+    .square, .square2, .square3{
+        width: 320px;
+        height: 320px;
+    }
+
+    .square .content h4,
+    .square2 .content h4,
+    .square3 .content h4{
+        font-size: 36px;
+        color: var(--couleur2);
+    }
+
+    .box-container3com{
+        background-position: 40% 40%;
+    }
+
+    .box-container3com p{
+        font-size: 36px;
+
+    }
+
+    .box-container4 .container-card4{
+        width: 400px;
+        height: 380px;
+    }
+
+    .box-container4com p{
+        font-size: 36px;
+    }
+
+    .slider{
+        min-height: 80vh;
+        margin-bottom: 5%;
+        display: none;
+    }
+
+    .slidermobile{
+        display: flex;
+        min-height: 100%;
+        width: auto;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-image: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%,rgba(255, 255, 255, 0.2) 30%, rgba(255, 255, 255, 0) 100%), url("/img/bg_ortho6.jpg");
+        border-top: 20px solid;
+        border-image: linear-gradient(90deg, var(--couleur3) 0% , var(--couleur4) 100%) 1;
+    }
+
+    .cardslider1{
+        width: 380px;
+        height: 240px;
+        margin: 5%;
+        border: 2px solid var(--couleur2);
+        border-radius: 50px;
+        background: url("/img/bg_ortho1.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: center;
+    }
+
+    .cardslider2{
+        width: 380px;
+        height: 240px;
+        margin: 5%;
+        border: 2px solid var(--couleur2);
+        border-radius: 50px;
+        background: url("/img/bg_ortho2.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: center;
+    }
+
+    .cardslider3{
+        width: 380px;
+        height: 240px;
+        margin: 5%;
+        border: 2px solid var(--couleur2);
+        border-radius: 50px;
+        background: url("/img/optic_3.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: center;
+    }
+
+    .cardslider4{
+        width: 380px;
+        height: 240px;
+        margin: 5%;
+        border: 2px solid var(--couleur2);
+        border-radius: 50px;
+        background: url("/img/optic_4.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: center;
+    }
+
+    .cardslider5{
+        width: 380px;
+        height: 240px;
+        margin: 5%;
+        border: 2px solid var(--couleur2);
+        border-radius: 50px;
+        background: url("/img/optic_9.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: center;
+    }
+
+    .box-container5{    
+        flex-direction: column;
+        padding: 5%;
+    }
+
+    .box-card5, .box-frame5{
+        margin: 5%;
+    }
+
+    .box-card5{
+        width: 380px;
+        height: 300px;
+    }
+
+    #iframe{
+        width: 380px;
+        height: 240px;
+    }
+
+    .box-content5 a, .box-content5 li{
+        font-size: 24px;
+    }
+
+    .box-container5com #about1{
+        font-size: 28px;
+    }
+
+    .containerortho11 .containercontent11,
+    .containerortho12 .containercontent12 {
+        width: 80vw;
+    }
+
+    .pimg2 .pimgtext,
+    .pimg7 .pimgtext,
+    .pimg13 .pimgtext {
+        font-size: 48px;
+    }
+
+    .pimg13{
+        background-position: 0% 0%;
+    }
+
+    .pimg1,
+    .pimg2,
+    .pimg3,
+    .pimg4,
+    .pimg5,
+    .pimg6,
+    .pimg7,
+    .pimg8,
+    .pimg9,
+    .pimg10,
+    .pimg11,
+    .pimg12,
+    .pimg13,
+    .pimg14{
+        background-attachment: scroll;
+    }
+
+    .containerortho1,
+    .containerortho2,
+    .containerortho3,
+    .containerortho4,
+    .containerortho5,
+    .containerortho6,
+    .containerortho7,
+    .containerortho8,
+    .containerortho9,
+    .containerortho10{
+        flex-direction: column;
+    }
+
+    .containerorthodroite1,
+    .containerorthogauche2,
+    .containerorthodroite3,
+    .containerorthogauche4,
+    .containerorthodroite5,
+    .containerorthogauche6,
+    .containerorthodroite7,
+    .containerorthogauche8,
+    .containerorthodroite9,
+    .containerorthogauche10{
+        margin-left: 5%;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        border: none;
+    } 
+
+    .scrolltotop{
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 20px;
+    }
+}
+
+
+/***********************************************************************************************************************************
+************************************************   600PX - 768PX  TABLETTE   *******************************************************
+***********************************************************************************************************************************/
+
+@media all and (min-width: 600px) and (max-width: 767px){
+
+    header{
+        min-height: 20vh;
+    }
+
+    header .navbar ul li {
+        margin: 30px;
+    }
+
+    .imgbgecriture{
+        width: 400%;
+        top: 0%;
+        left: -90%;
+    }
+
+    .gridone{
+        margin-bottom: 5%;
+    }
+
+    .gridtwo{
+        margin-bottom: 5%;
+    }
+    .gridthree{
+        margin-bottom: 10%;
+    }
+
+    .box-container4 .container-card4{
+        width: 480px;
+        height: 380px;
+    }
+
+    .box-container4com p{
+        font-size: 48px;
+    }
+
+    .slider{
+        min-height: 80vh;
+        margin-bottom: 5%;
+        display: none;
+    }
+
+    .slidermobile{
+        display: flex;
+        min-height: 100%;
+        width: auto;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-image: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%,rgba(255, 255, 255, 0.2) 30%, rgba(255, 255, 255, 0) 100%), url("/img/bg_ortho6.jpg");
+        border-top: 20px solid;
+        border-image: linear-gradient(90deg, var(--couleur3) 0% , var(--couleur4) 100%) 1;
+    }
+
+    .cardslider1{
+        width: 380px;
+        height: 240px;
+        margin: 5%;
+        border: 2px solid var(--couleur2);
+        border-radius: 50px;
+        background: url("/img/bg_ortho1.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: center;
+    }
+
+    .cardslider2{
+        width: 380px;
+        height: 240px;
+        margin: 5%;
+        border: 2px solid var(--couleur2);
+        border-radius: 50px;
+        background: url("/img/bg_ortho2.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: center;
+    }
+
+    .cardslider3{
+        width: 380px;
+        height: 240px;
+        margin: 5%;
+        border: 2px solid var(--couleur2);
+        border-radius: 50px;
+        background: url("/img/optic_3.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: center;
+    }
+
+    .cardslider4{
+        width: 380px;
+        height: 240px;
+        margin: 5%;
+        border: 2px solid var(--couleur2);
+        border-radius: 50px;
+        background: url("/img/optic_4.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: center;
+    }
+
+    .cardslider5{
+        width: 380px;
+        height: 240px;
+        margin: 5%;
+        border: 2px solid var(--couleur2);
+        border-radius: 50px;
+        background: url("/img/optic_9.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align: center;
+    }
+
+    .box-container5com{
+        min-height: 120vh;
+    }
+
+    .box-container5{    
+        flex-direction: column;
+        padding: 2%;
+    }
+
+    .box-card5, .box-frame5{
+        margin: 2%;
+    }
+
+    .containerortho11 .containercontent11,
+    .containerortho12 .containercontent12 {
+        width: 80vw;
+    }
+
+    .containerortho1,
+    .containerortho2,
+    .containerortho3,
+    .containerortho4,
+    .containerortho5,
+    .containerortho6,
+    .containerortho7,
+    .containerortho8,
+    .containerortho9,
+    .containerortho10{
+        flex-direction: column;
+    }
+
+    .containerorthodroite1,
+    .containerorthogauche2,
+    .containerorthodroite3,
+    .containerorthogauche4,
+    .containerorthodroite5,
+    .containerorthogauche6,
+    .containerorthodroite7,
+    .containerorthogauche8,
+    .containerorthodroite9,
+    .containerorthogauche10{
+        margin-left: 5%;
+    }
+}
+
+
+/***********************************************************************************************************************************
+************************************************   768PX - 1024PX PETIT PC   *******************************************************
+***********************************************************************************************************************************/
+
+
+@media all and (min-width: 768px) and (max-width: 1023px){
+
+    header{
+        min-height: 20vh;
+    }
+
+    header .navbar ul li {
+        margin: 30px;
+    }
+
+    .imgbgecriture{
+        width: 300%;
+        top: 0%;
+        left: -50%;
+    }
+
+    .gridone{
+        margin-bottom: 5%;
+    }
+
+    .gridtwo{
+        margin-bottom: 5%;
+    }
+    .gridthree{
+        margin-bottom: 10%;
+    }
+
+    .slider{
+        min-height: 80vh;
+        margin-bottom: 5%;
+    }
+
+    .box-container5{
+        flex-direction: column;
+        padding: 2%;
+    }
+
+    .box-card5, .box-frame5{
+        margin: 2%;
+    }
+
+    .containerortho11 .containercontent11,
+    .containerortho12 .containercontent12 {
+        width: 80vw;
+    }
+
+    .containerortho1,
+    .containerortho2,
+    .containerortho3,
+    .containerortho4,
+    .containerortho5,
+    .containerortho6,
+    .containerortho7,
+    .containerortho8,
+    .containerortho9,
+    .containerortho10{
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .containerorthodroite1,
+    .containerorthogauche2,
+    .containerorthodroite3,
+    .containerorthogauche4,
+    .containerorthodroite5,
+    .containerorthogauche6,
+    .containerorthodroite7,
+    .containerorthogauche8,
+    .containerorthodroite9,
+    .containerorthogauche10{
+        margin-left: 5%;
+    }
+}
+
+
+/***********************************************************************************************************************************
+****************************************************   1024PX - 1440PX PC    *******************************************************
+***********************************************************************************************************************************/
+
+
+@media all and (min-width: 1024px) and (max-width: 1440px){
+
+    header{
+        min-height: 20vh;
+    }
+
+    .imgbgecriture{
+        width: 250%;
+        top: 0%;
+        left: -30%;
+    }
+
+    .gridone{
+        margin-bottom: 5%;
+    }
+
+    .gridtwo{
+        margin-bottom: 5%;
+    }
+
+    .gridthree{
+        margin-bottom: 10%;
+    }
+
+    .slider{
+        min-height: 80vh;
+        margin-bottom: 5%;
+    }
+
+    .box-container5com li{
+        font-size: 36px;
+    }
+
+    .box-container5com a{
+        font-size: 36px;
+    }
+
+    .box-container5com #about1{
+        font-size: 50px;
+    }
+
+    .box-container5{    
+        flex-direction: column;
+        padding: 2%;
+    }
+
+    .box-card5, .box-frame5{
+        margin: 2%;
+    }
+
+    .box-card5{
+        width: 600px;
+        height: 400px;
+    }
+
+    .box-container5 iframe{
+        width: 600px;
+        height: 400px;
+    }
+
+    table {
+        margin-left: 0;
+        letter-spacing: 1.5px;
+    }
+}
+
+
+@media all and (min-height: 1024px) and (max-width: 1440px){
+
+
+
+
+}

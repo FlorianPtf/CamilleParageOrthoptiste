@@ -2,21 +2,20 @@
 
 {% block index %}
 
-
 <!-- **********************************************************************************************************************************
 **************************************************************   HEADER    ************************************************************
 *********************************************************************************************************************************** -->
 
 
     <header>
-         <a href="#accueil" class="logo"> <img src="img/logo_transparent.png"></a> 
+         <a href="{{ path('home')}}" class="logo"> <img src="img/logo_transparent.png"> </a> 
 
         <nav class="navbar">
             <ul class="navlinks">
-                <li><a href="#orthoptie">Orthoptie</a></li>
-                <li><a href="#bilan">Bilans</a></li>
-                <li><a href="#reeducation">Réeducations</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#orthoptie" class="link">Orthoptie</a></li>
+                <li><a href="#bilan" class="link1">Bilans</a></li>
+                <li><a href="#reeducation" class="link2">Réeducations</a></li>
+                <li><a href="#contact" class="link3">Contact</a></li>
             </ul>
             <div class="burger">
                 <div class="line1"></div>                
@@ -101,8 +100,6 @@
                         <div class="popup-inner">
                             <div class="popup__photo">
                                 <img src="img/bilanorthoptique1.jpeg" alt="">
-                                <!-- <img src="img/bilanbassevision1.jpeg" alt="">
-                                <img src="img/bilanbassevision2.jpeg" alt=""> -->
                             </div>
                             <div class="popup__text">
                                 <h2>L'Orthoptie</h2>
@@ -185,7 +182,7 @@
                                             Le bilan orthoptique c’est l’étude du fonctionnement de la vision qui permet de poser un diagnostic et 
                                             définir un projet de soins  
                                         </p>
-                                        <a class="button" href="{{ path('app_bilan')}}">En savoir plus</a>
+                                        <a class="button" href="{{ path('app_bilan')}}#bilan1">En savoir plus</a>
                                     </div>
                                 </div>
                             </div>
@@ -312,11 +309,10 @@
                           <a class="popup__close" href="#popupbil">X</a>
                         </div>
                     </div>
+                </section>
 
 
 
-
-</section>
 <!-- *********************************************************************************************************************************
 *******************************************************   NOS REEDUCATIONS    ********************************************************
 ***********************************************************************************************************************************-->
@@ -596,114 +592,86 @@
 ***********************************************************************************************************************************-->
 
 
-                    <div class="pimg1">
-                    </div>
+                <div class="pimg1">
+                </div>
 
 <!-- *********************************************************************************************************************************
 **********************************************************   CAROUSSEL   *************************************************************
 ***********************************************************************************************************************************-->
 
-                    <section class="slider">
-                       
+                <section class="slider">
+                    <div class="slider2">
 
-                        <div class="slider2">
+                        <input type="radio" name="slider" id ="s1" checked>
+                        <input type="radio" name="slider" id ="s2">
+                        <input type="radio" name="slider" id ="s3">
+                        <input type="radio" name="slider" id ="s4">
+                        <input type="radio" name="slider" id ="s5">
 
-                            <input type="radio" name="slider" id ="s1" checked>
-                            <input type="radio" name="slider" id ="s2">
-                            <input type="radio" name="slider" id ="s3">
-                            <input type="radio" name="slider" id ="s4">
-                            <input type="radio" name="slider" id ="s5">
+                        <label for="s1" id="slide1">
+                            <img class="image" id="i1" src="img/bg_ortho1.jpg" width="100%" height="100%">
+                            <p>
+                                PHOTO A MODIFIER
+                            </p>
+                        </label>
 
-                            <label for="s1" id="slide1">
-                                <img class="image" id="i1" src="img/bg_ortho1.jpg" width="100%" height="100%">
-                                <p>
-                                    PHOTO A MODIFIER
-                                </p>
-                            </label>
+                        <label for="s2" id="slide2">
+                            <img class="image" id="i2" src="img/bg_ortho2.jpg" width="100%" height="100%">
+                            <p>
+                                PHOTO A MODIFIER
+                            </p>
+                        </label>
 
-                            <label for="s2" id="slide2">
-                                <img class="image" id="i2" src="img/bg_ortho2.jpg" width="100%" height="100%">
-                                <p>
-                                    PHOTO A MODIFIER
-                                </p>
-                            </label>
+                        <label for="s3" id="slide3">
+                            <img class="image" id="i3" src="img/optic_3.jpg" width="100%" height="100%">
+                            <p>
+                                PHOTO A MODIFIER
+                            </p>
+                        </label>
 
-                            <label for="s3" id="slide3">
-                                <img class="image" id="i3" src="img/optic_3.jpg" width="100%" height="100%">
-                                <p>
-                                    PHOTO A MODIFIER
-                                </p>
-                            </label>
+                        <label for="s4" id="slide4">
+                            <img class="image" id="i4" src="img/optic_4.jpg" width="100%" height="100%">
+                            <p>
+                                PHOTO A MODIFIER
+                            </p>
+                        </label>
 
-                            <label for="s4" id="slide4">
-                                <img class="image" id="i4" src="img/optic_4.jpg" width="100%" height="100%">
-                                <p>
-                                    PHOTO A MODIFIER
-                                </p>
-                            </label>
+                        <label for="s5" id="slide5">
+                            <img class="image" id="i5" src="img/optic_9.jpg" width="100%" height="100%">
+                            <p>
+                                PHOTO A MODIFIER
+                            </p>
+                        </label>
+                    </div>
+                </section>
 
-                            <label for="s5" id="slide5">
-                                <img class="image" id="i5" src="img/optic_9.jpg" width="100%" height="100%">
-                                <p>
-                                    PHOTO A MODIFIER
-                                </p>
-                            </label>
+                <section>
+                    <div class="slidermobile">
+                        <div class="cardslider1">  
+                            <p> Photo a Modifier </p>
                         </div>
-                    </section>
 
-<!-- *********************************************************************************************************************************
-**********************************************************   CONTACT    **************************************************************
-***********************************************************************************************************************************-->
-
-                    <section>
-                        <div class="box-container5com">
-                            <section class="curved">
-                            </section>
-                            <h2>Nous contacter</h2>
-                            
-                            <div class="box-container5">
-                                <div class="box-card5">
-                                    <div class="box-content5">
-                                        <ul>
-                                            <li id="about1">Camille Parage</li>
-                                            <li><a href="mailto:blabla@gmaail.com"><i class="fa-solid fa-envelope"></i> Mail@gmail.com</a></li>
-                                            <li><a href="tel:+33123456789"><i class="fa-solid fa-phone"></i> 01 23 45 67 89</a></li>
-                                            <li><i class="fa-solid fa-location-pin"></i> Adresse Cabinet</li>
-                                        </ul>                               
-                                    </div>
-                                </div>                                
-
-                                <div class="box-frame5">
-                                    <div class="box-content5" id="iframe">
-                                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10247.129420525094!2d1.4180359!3d50.0529083!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6bb001db73e410f5!2sThorel%20Clemence!5e0!3m2!1sfr!2sfr!4v1654161367173!5m2!1sfr!2sfr"
-                                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                    </div>
-                                </div>
-
-                                <div class="box-card5">
-                                    <div class="box-content5">
-                                        <ul>
-                                            <li id="about1">Clemence Thorel</li>
-                                            <li><a href="mailto:blabla@gmaail.com"><i class="fa-solid fa-envelope"></i> Mail@gmail.com</a></li>
-                                            <li><a href="tel:+33123456789"><i class="fa-solid fa-phone"></i> 01 23 45 67 89</a></li>
-                                            <li><i class="fa-solid fa-location-pin"></i> Adresse Cabinet</li>
-                                        </ul> 
-
-                                    </div>
-                                </div>    
-                            </div>
+                        <div class="cardslider2">  
+                            <p> Photo a Modifier </p>
                         </div>
-                    </section>
 
-    <section>
-        <section class="curvedfooter"  id="contact">
-        </section>
-            <div class="footer">
-                <a href="https://github.com/FlorianPtf" target="_blank">Florian Ptf © | All Rights Reserved</a>
-            </div>
-    </section>
+                        <div class="cardslider3">  
+                            <p> Photo a Modifier </p>
+                        </div>
+
+                        <div class="cardslider4">  
+                            <p> Photo a Modifier </p>
+                        </div>
+                        
+                        <div class="cardslider5">  
+                            <p> Photo a Modifier </p>
+                        </div>
+                    </div>             
+                </section>
+
+
+      
 </article>
-
     <script src="/js/script.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.3/vanilla-tilt.min.js"></script>
 

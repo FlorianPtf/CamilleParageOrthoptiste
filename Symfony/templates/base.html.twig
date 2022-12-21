@@ -21,6 +21,9 @@
 
 
         {% block index %}
+        {% endblock %}        
+        
+        {% block orthoptie %}
         {% endblock %}
 
         {% block bilan %}
@@ -29,14 +32,82 @@
         {% block reeducation %}
         {% endblock %}
 
-        {% block orthoptie %}
-        {% endblock %}
-
-        {% block footer %}
-        {% endblock %}
 
 
-        </body>
+
+
+<!-- *********************************************************************************************************************************
+**********************************************************   FOOTER     **************************************************************
+***********************************************************************************************************************************-->
+
+        <section>
+            <div class="box-container5com">
+                <section class="curved">
+                </section>
+                    <h2>Nous contacter</h2>
+                    <div class="scrolltotop" onclick="scrollToTop();"><i class="fa-solid fa-arrow-up"></i></div>
+                
+                <div class="box-container5">
+                    <div class="box-card5">
+                        <div class="box-content5">
+                            <ul>
+                                <li id="about1">Camille Parage</li>
+                                <li><a href="mailto:blabla@gmaail.com"><i class="fa-solid fa-envelope"></i> Mail@gmail.com</a></li>
+                                <li><a href="tel:+33123456789"><i class="fa-solid fa-phone"></i> 01 23 45 67 89</a></li>
+                                <li><i class="fa-solid fa-location-pin"></i> Avenue de la Gare 76260 EU</li>
+                            </ul>                               
+                        </div>
+                    </div>                                
+
+                    <div class="box-frame5">
+                        <div class="box-content5" id="iframe">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10247.129420525094!2d1.4180359!3d50.0529083!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6bb001db73e410f5!2sThorel%20Clemence!5e0!3m2!1sfr!2sfr!4v1654161367173!5m2!1sfr!2sfr"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+
+                    <div class="box-card5">
+                        <div class="box-content5">
+                            <ul>
+                                <li id="about1">Clemence Thorel</li>
+                                <li><a href="mailto:blabla@gmaail.com"><i class="fa-solid fa-envelope"></i> Mail@gmail.com</a></li>
+                                <li><a href="tel:+33123456789"><i class="fa-solid fa-phone"></i> 01 23 45 67 89</a></li>
+                                <li><i class="fa-solid fa-location-pin"></i> Avenue de la Gare 76260 EU</li>
+                            </ul> 
+
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </section>
+
+
+<!-- *********************************************************************************************************************************
+**********************************************************   CONTACT    **************************************************************
+***********************************************************************************************************************************-->
+
+        <section>
+            <section class="curvedfooter"  id="contact">
+            </section>
+                <div class="footer">
+                    <a href="https://github.com/FlorianPtf" target="_blank">Florian Ptf © | All Rights Reserved</a>
+                </div>
+        </section>
+    </body>
+
+    <script type="text/javascript">
+        window.addEventListener('scroll', function(){
+            var scroll = document.querySelector('.scrolltotop');
+            scroll.classList.toggle("active", window.scrollY > 750)
+        })
+
+        function scrollToTop(){
+            window.scrollTo({
+                top:0,
+                behavior: 'smooth'
+            })
+        }
+    </script>
 
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
